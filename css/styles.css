@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     background-color: rgb(25, 25, 25);
@@ -67,7 +68,10 @@ header .title-container h1 {
     width: 90%;
     margin: 40px auto;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
     height: auto;
+    min-height: 55vh;
 }
 
 .section-container .button {
@@ -199,10 +203,10 @@ footer .banner-container {
     margin-top: 40px;
 }
 
-footer .fixed-banner-container {
-    position: absolute;
+footer .home-banner-container {
+    position: relative;
     bottom: 0;
-    height: 120px;
+    height: 300px;
     overflow: hidden;
     margin-top: 40px;
 }
@@ -218,3 +222,16 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+/* header {
+    width: 100%;
+}
+
+header .banner-container {
+    height: 120px;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+} */
