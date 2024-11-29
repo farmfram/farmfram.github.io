@@ -1,0 +1,32 @@
+
+.section-container {
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    height: auto;
+    min-height: 55vh;
+}
+
+.section-container .button {
+    height: 70px;
+    width: 18%;
+    min-width: fit-content;
+    display: inline-block;
+    margin: 4px 4px;
+    vertical-align: top;
+    background-color: rgba(176, 59, 16, 0.884);
+    color: white;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.section-container a {
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}

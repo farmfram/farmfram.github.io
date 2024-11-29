@@ -61,45 +61,16 @@ header .title-container h1 {
     text-transform: uppercase;
 }
 
-/* The following styles the link buttons */
-
-.section-container {
-    display: flex;
-    width: 90%;
-    margin: 40px auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: start;
-    height: auto;
-    min-height: 55vh;
-}
-
-.section-container .button {
-    height: 70px;
-    width: 18%;
-    min-width: fit-content;
-    display: inline-block;
-    margin: 4px 4px;
-    vertical-align: top;
-    background-color: rgba(176, 59, 16, 0.884);
-    color: white;
-    border-radius: 30px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-}
-
-.section-container a {
-    text-align: center;
-    text-decoration: none;
-    margin: auto;
-}
-
 /* The following handles the calculator divs */
+.calculator-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85vh;
+}
 
 .calculator-container {
-    position: relative;
-    top: 20px;
+    margin-top: 20px;
     margin-inline: auto;
     margin-bottom: 20px;
     padding-bottom: 150px;
@@ -122,9 +93,7 @@ header .title-container h1 {
 }
 
 .calculator-container .input-container {
-    position: relative;
-    top: 20px;
-    left: 25px;
+    padding: 20px 20px 0 20px;
 }
 
 .calculator-container .number-bar-title h3 {
@@ -138,30 +107,39 @@ header .title-container h1 {
 }
 
 .calculator-container .paired-container {
-    position: relative;
-    top: 20px;
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .calculator-container .paired-container .input-container {
     width: 30%;
     display: inline-block;
     margin: 0;
-    vertical-align: top;
 }
 
 .calculator-container .paired-container .map-container {
     width: 60%;
     display: inline-block;
-    vertical-align: top;
     margin-top: 40px;
 }
 
 
 .calculator-container .paired-container #right-triangle{
-    position: absolute;
-    left: 50%;
     max-height: 300px;
+}
+
+@media screen and (max-width: 800px) {
+    .calculator-container .paired-container #right-triangle{
+        max-height: 200px;
+    }
+
+    .calculator-container .number-bar {
+        background-color: rgb(31, 31, 31);
+        color: white;
+        max-width: 100px;
+    }
+    
 }
 
 .button-container {
@@ -190,6 +168,8 @@ header .title-container h1 {
     color: white;
     background-color: rgba(176, 59, 16, 0.775);
 }
+
+ /* The following contains the footer styling */
 
 footer {
     width: 100%;
@@ -222,16 +202,3 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-/* header {
-    width: 100%;
-}
-
-header .banner-container {
-    height: 120px;
-    overflow: hidden;
-}
-
-header img {
-    width: 100%;
-} */
