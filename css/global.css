@@ -113,19 +113,20 @@ header .title-container h1 {
 .calculator-container .paired-container {
     display: flex;
     width: 100%;
+    height: fit-content;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: end;
 }
 
 .calculator-container .paired-container .input-container {
     width: 30%;
-    display: inline-block;
     margin: 0;
 }
 
 .calculator-container .paired-container .map-container {
     width: 60%;
-    display: inline-block;
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 .button-container {
@@ -138,7 +139,7 @@ header .title-container h1 {
     max-height: 300px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 930px) {
     .calculator-container .paired-container #right-triangle {
         max-height: 200px;
     }
@@ -151,7 +152,7 @@ header .title-container h1 {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
     .calculator-container .paired-container #right-triangle {
         max-height: 150px;
     }

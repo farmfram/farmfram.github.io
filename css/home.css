@@ -5,8 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: start;
-    height: auto;
-    min-height: 55vh;
+    min-height: 70vh;
 }
 
 .section-container .button {
