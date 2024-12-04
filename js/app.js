@@ -42,61 +42,71 @@ function rightAngleCalculator() {
         }
         if(angleA !== 0 && sideB !== 0){
             angleB = (90 - angleA)
-            // sideA =
-            // sideC =     
+            sideA = sideB * Math.tan(angleA * (Math.PI/180))
+            sideC = sideB / Math.cos(angleA * (Math.PI/180))   
         }
         if(angleA !== 0 && sideC !== 0){
             angleB = (90 - angleA)
-            // sideA =
-            // sideB =
+            sideA = sideC * Math.sin(angleA * (Math.PI/180))
+            sideB = sideC * Math.cos(angleA * (Math.PI/180))
         }
 
         //angleB options
         if(angleB !== 0 && sideA !== 0){
             angleA = (90 - angleB)
-            // sideB =
-            // sideC =
+            sideB = sideA * Math.tan(angleB * (Math.PI/180))
+            sideC = sideA / Math.cos(angleB * (Math.PI/180))
         }
         if(angleB !== 0 && sideB !== 0){
             angleA = (90 - angleB)
-            // sideA =
-            // sideC =
+            sideA = sideB / Math.tan(angleB * (Math.PI/180))
+            sideC = sideB / Math.sin(angleB * (Math.PI/180))
         }
         if(angleB !== 0 && sideC !== 0){
             angleA = (90 - angleB)
-            // sideA =
-            // sideB =
+            sideA = sideC * Math.cos(angleB * (Math.PI/180))
+            sideB = sideC * Math.sin(angleB * (Math.PI/180))
         }
 
         // Side options
         if (sideA !== 0 && sideB !== 0) {
             angleA = Math.atan2(sideA, sideB) * (180/Math.PI)
             angleB = (90 - angleA)
-            // sideC =
+            sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2))
         }
         if (sideA !== 0 && sideC !== 0) {
-            // angleA =
+            angleA = Math.asin(sideA / sideC)  / (Math.PI/180)
             angleB = (90 - angleA)
-            // sideB =
+            sideB = Math.sqrt(Math.pow(sideC, 2) - Math.pow(sideA, 2))
         }
         if (sideC !== 0 && sideB !== 0) {
-            // angleA =
+            angleA =  Math.acos(sideB / sideC)  / (Math.PI/180)
             angleB = (90 - angleA)
-            // sideA =
+            sideA = Math.sqrt(Math.pow(sideC, 2) - Math.pow(sideB, 2))
         }
 
     }else {           // Alert for invalid inputs
         alert("must enter either two sides or a side and an angle")
     }
+
+    // Handle Floating point errors - later add the toFixed method when update table
+    // angleA = +angleA.toFixed(2)
+    // angleB = +angleB.toFixed(2)
+    // sideA = +sideA.toFixed(4)
+    // sideB = +sideB.toFixed(4)
+    // sideC = +sideC.toFixed(4)
+
+    document.getElementById("angle-a").value = parseFloat(angleA.toFixed(2))
+    document.getElementById("angle-b").value = parseFloat(angleB.toFixed(2))
+    document.getElementById("side-a").value = parseFloat(sideA.toFixed(4))
+    document.getElementById("side-b").value = parseFloat(sideB.toFixed(4))
+    document.getElementById("side-c").value = parseFloat(sideC.toFixed(4))
+
     console.log("angle A: " + angleA)
     console.log("angle B: " + angleB)
     console.log("side A: " + sideA)
     console.log("side B: " + sideB)
     console.log("side C: " + sideC)
-
-    //else, check what two variable have been recieved
-    //perform reuired arithmatic operations
-    //update all input fields with the calculated values(format to 4 decimale places)
 }
 
 let rightAngleButton = document.getElementById('rightAngleCalculate')
