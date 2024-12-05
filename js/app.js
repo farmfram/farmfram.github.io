@@ -142,6 +142,18 @@ function triangleCalculator() {
         document.getElementById("tri-side-c").value = parseFloat(sideC.toFixed(4))
     }
 
+    function cosineLaw(angle, side1, side2) {
+       return Math.sqrt((side1**2)+(side2**2)-(2*side1*side2*Math.cos(angle * (Math.PI / 180))))
+    }
+
+    function sineLawSide(angle1, angle2, side1){
+        return ((side1*Math.sin(angle2 * (Math.PI / 180)))/Math.sin(angle1 * (Math.PI / 180)))
+    }
+
+    function sineLawAngle(angle1, side1, side2){
+        return (Math.asin((Math.sin(angle1*(Math.PI/180))*side2)/side1)*(180/Math.PI))
+    }
+
     //check number of inputs recieved
     let inputCount = 0
     let angleCount = 0
@@ -174,16 +186,47 @@ function triangleCalculator() {
     if (inputCount === 3 && ((sideCount === 2 && angleCount === 1) || (sideCount === 1 && angleCount === 2))){ //check that a valid number of inputs are recieved before deciding what operation to perform
 
         if((angleC !== 0 && sideA !== 0 && sideB !== 0)){
-            sideC = Math.sqrt((sideA**2)+(sideB**2)-(2*sideA*sideB*Math.cos(angleC * (Math.PI / 180))))
-
+            sideC = cosineLaw(angleC, sideA, sideB)
+            angleA = sineLawAngle(angleC, sideC, sideA)
+            angleB = sineLawAngle(angleC, sideC, sideB)
         }else if(angleB !== 0 && sideA !== 0 && sideC !== 0){
-            sideB = Math.sqrt((sideA**2)+(sideC**2)-(2*sideA*sideC*Math.cos(angleB * (Math.PI / 180))))
-
+            sideB = cosineLaw(angleB, sideA, sideC)
+            angleA = sineLawAngle(angleB, sideB, sideA)
+            angleC = sineLawAngle(angleB, sideB, sideC)
         }else if(angleA !== 0 && sideC !== 0 && sideB !== 0){
-            sideA = Math.sqrt((sideC**2)+(sideB**2)-(2*sideC*sideB*Math.cos(angleA * (Math.PI / 180))))
+            sideA = cosineLaw(angleA, sideC, sideB)
+            angleC = sineLawAngle(angleA, sideA, sideC)
+            angleB = sineLawAngle(angleA, sideA, sideB)
 
-        }else{ //Use Sine Law
 
+        }else if(sideA !== 0 && angleA !== 0 && angleB !== 0){// Two Angles and a Side
+            sideB = sineLawSide(angleA, angleB, sideA)
+            angleC = (180-angleA-angleB)
+            sideC = sineLawSide(angleA, angleC, sideA)
+        }else if(sideA !== 0 && angleA !== 0 && angleC !== 0){
+
+        }else if(sideB !== 0 && angleB !== 0 && angleA !== 0){
+
+        }else if(sideB !== 0 && angleB !== 0 && angleC !== 0){
+
+        }else if(sideC !== 0 && angleC !== 0 && angleA !== 0){
+
+        }else if(sideC !== 0 && angleC !== 0 && angleC !== 0){
+
+
+
+        }else if(angleA !== 0 && sideA !== 0 && sideB !==0){// Two Sides and an Angle
+
+        }else if(angleA !== 0 && sideA !== 0 && sideC !==0){
+            
+        }else if(angleB !== 0 && sideB== 0 && sideA !==0){
+            
+        }else if(angleB !== 0 && sideB !== 0 && sideC !==0){
+            
+        }else if(angleC !== 0 && sideC !== 0 && sideA !==0){
+            
+        }else if(angleC !== 0 && sideC !== 0 && sideB !==0){
+            
         }
 
     } else {
