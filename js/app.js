@@ -21,23 +21,25 @@ function rightAngleCalculator() {
         document.getElementById("side-c").value = parseFloat(sideC.toFixed(4))
     }
 
-    //check number of inputs recieved
+    //check for user inputs
     let inputCount = 0
-    if (angleA !== 0) {
-        inputCount++
+    let angleCount = 0
+    let sideCount = 0
+    let angleTerms = [angleA, angleB]
+    let sideTerms = [sideA, sideB, sideC]
+    for (let currentTerm of angleTerms){
+        if(currentTerm !== 0){
+            angleCount++
+            inputCount++
+        }
     }
-    if (angleB !== 0) {
-        inputCount++
+    for (let currentTerm of sideTerms){
+        if(currentTerm !== 0){
+            sideCount++
+            inputCount++
+        }
     }
-    if (sideA !== 0) {
-        inputCount++
-    }
-    if (sideB !== 0) {
-        inputCount++
-    }
-    if (sideC !== 0) {
-        inputCount++
-    }
+
     // perform calculation
     if (inputCount === 2 && (angleA === 0 || angleB === 0) && (angleA < 90 && angleB < 90) && (angleA >= 0 && angleB >= 0)) {
 
@@ -158,82 +160,92 @@ function triangleCalculator() {
     let inputCount = 0
     let angleCount = 0
     let sideCount = 0
-    if (angleA !== 0) {
-        angleCount++
-        inputCount++
-    }
-    if (angleB !== 0) {
-        angleCount++
-        inputCount++
-    }
-    if (angleC !== 0) {
-        angleCount++
-        inputCount++
-    }
-    if (sideA !== 0) {
-        sideCount++
-        inputCount++
-    }
-    if (sideB !== 0) {
-        sideCount++
-        inputCount++
-    }
-    if (sideC !== 0) {
-        sideCount++
-        inputCount++
-    }
-    // perform calculation
-    if (inputCount === 3 && ((sideCount === 2 && angleCount === 1) || (sideCount === 1 && angleCount === 2))){ //check that a valid number of inputs are recieved before deciding what operation to perform
-
-        if((angleC !== 0 && sideA !== 0 && sideB !== 0)){
-            sideC = cosineLaw(angleC, sideA, sideB)
-            angleA = sineLawAngle(angleC, sideC, sideA)
-            angleB = sineLawAngle(angleC, sideC, sideB)
-        }else if(angleB !== 0 && sideA !== 0 && sideC !== 0){
-            sideB = cosineLaw(angleB, sideA, sideC)
-            angleA = sineLawAngle(angleB, sideB, sideA)
-            angleC = sineLawAngle(angleB, sideB, sideC)
-        }else if(angleA !== 0 && sideC !== 0 && sideB !== 0){
-            sideA = cosineLaw(angleA, sideC, sideB)
-            angleC = sineLawAngle(angleA, sideA, sideC)
-            angleB = sineLawAngle(angleA, sideA, sideB)
-
-
-        }else if(sideA !== 0 && angleA !== 0 && angleB !== 0){// Two Angles and a Side
-            sideB = sineLawSide(angleA, angleB, sideA)
-            angleC = (180-angleA-angleB)
-            sideC = sineLawSide(angleA, angleC, sideA)
-        }else if(sideA !== 0 && angleA !== 0 && angleC !== 0){
-
-        }else if(sideB !== 0 && angleB !== 0 && angleA !== 0){
-
-        }else if(sideB !== 0 && angleB !== 0 && angleC !== 0){
-
-        }else if(sideC !== 0 && angleC !== 0 && angleA !== 0){
-
-        }else if(sideC !== 0 && angleC !== 0 && angleC !== 0){
-
-
-
-        }else if(angleA !== 0 && sideA !== 0 && sideB !==0){// Two Sides and an Angle
-
-        }else if(angleA !== 0 && sideA !== 0 && sideC !==0){
-            
-        }else if(angleB !== 0 && sideB== 0 && sideA !==0){
-            
-        }else if(angleB !== 0 && sideB !== 0 && sideC !==0){
-            
-        }else if(angleC !== 0 && sideC !== 0 && sideA !==0){
-            
-        }else if(angleC !== 0 && sideC !== 0 && sideB !==0){
-            
+    //check for user inputs
+    let angleTerms = [angleA, angleB, angleC]
+    let sideTerms = [sideA, sideB, sideC]
+    for (let currentTerm of angleTerms){
+        if(currentTerm !== 0){
+            angleCount++
+            inputCount++
         }
-
-    } else {
-        alert("WRONG!")   // Alert for invalid inputs
-        alertState = 1
-        resetPage()
     }
+    for (let currentTerm of sideTerms){
+        if(currentTerm !== 0){
+            sideCount++
+            inputCount++
+        }
+    }
+
+    // perform calculation
+    // if (inputCount === 3 && ((sideCount === 2 && angleCount === 1) || (sideCount === 1 && angleCount === 2))){ //check that a valid number of inputs are recieved before deciding what operation to perform
+
+        switch (true) {
+
+            // Cosine Law
+            case (angleC !== 0 && sideA !== 0 && sideB !== 0):
+                sideC = cosineLaw(angleC, sideA, sideB)
+                angleA = sineLawAngle(angleC, sideC, sideA)
+                angleB = sineLawAngle(angleC, sideC, sideB)
+                break;
+
+            case (angleB !== 0 && sideA !== 0 && sideC !== 0):
+                sideB = cosineLaw(angleB, sideA, sideC)
+                angleA = sineLawAngle(angleB, sideB, sideA)
+                angleC = sineLawAngle(angleB, sideB, sideC)
+                break;
+
+            case (angleA !== 0 && sideC !== 0 && sideB !== 0):
+                sideA = cosineLaw(angleA, sideC, sideB)
+                angleC = sineLawAngle(angleA, sideA, sideC)
+                angleB = sineLawAngle(angleA, sideA, sideB)
+                break;
+
+                // Two Angles and a Side
+            case (sideA !== 0 && angleA !== 0 && angleB !== 0):
+                sideB = sineLawSide(angleA, angleB, sideA)
+                angleC = (180-angleA-angleB)
+                sideC = sineLawSide(angleA, angleC, sideA)
+                break;
+
+            case (sideA !== 0 && angleA !== 0 && angleC !== 0):
+
+                break;
+
+            case (sideB !== 0 && angleB !== 0 && angleA !== 0):
+
+                break;
+    
+            case (sideB !== 0 && angleB !== 0 && angleC !== 0):
+                break;
+            case (sideC !== 0 && angleC !== 0 && angleA !== 0):
+                break;
+            case (sideC !== 0 && angleC !== 0 && angleC !== 0):
+                break;
+
+            // Two Sides and an Angle
+            case (angleA !== 0 && sideA !== 0 && sideB !==0):
+                break;
+            case (angleA !== 0 && sideA !== 0 && sideC !==0):
+                break;
+            case (angleB !== 0 && sideB== 0 && sideA !==0):
+                break;
+            case (angleB !== 0 && sideB !== 0 && sideC !==0):
+                break;
+            case (angleC !== 0 && sideC !== 0 && sideA !==0):
+                break;
+            case (angleC !== 0 && sideC !== 0 && sideB !==0):
+                break;
+
+            // Three Sides
+            case (sideA !== 0 && sideB !== 0 && sideC !== 0):
+                break;
+
+            default:
+                alert("WRONG!")   // Alert for invalid inputs
+                alertState = 1
+                resetPage()
+                break;
+        }
 
     if (alertState === 0) {
         rightAnglePrint()
