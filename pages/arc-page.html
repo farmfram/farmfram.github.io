@@ -29,7 +29,58 @@
     </header>
 
     <section class="calculator-section">
+        <!-- Right Angle Caluclator Container -->
+        <div class="calculator-container">
+            <div class="calculator-title">
+                <h2>Arc Calculator</h2>
+            </div>
 
+            <!-- Groups the Input sections with the Instructional Image -->
+            <div class="paired-container">
+
+                <div class="input-container">
+                    <label class="number-bar-title" for="radius">
+                        <h3>Radius</h3>
+                    </label>
+                    <input class="number-bar" id="radius" type="number">
+
+                    <label class="number-bar-title" for="arc-angle">
+                        <h3>Arc Angle</h3>
+                    </label>
+                    <input class="number-bar" id="arc-angle" type="number">
+
+                    <label class="number-bar-title" for="arc-length">
+                        <h3>Arc Length</h3>
+                    </label>
+                    <input class="number-bar" id="arc-length" type="number">
+
+                    <label class="number-bar-title" for="chord-length">
+                        <h3>Chord Length</h3>
+                    </label>
+                    <input class="number-bar" id="chord-length" type="number">
+
+                    <label class="number-bar-title" for="middle-height">
+                        <h3>Height</h3>
+                    </label>
+                    <input class="number-bar" id="middle-height" type="number">
+                </div>
+
+                <div class="map-container">
+                    <img id="right-triangle" src="../images/arc-graphic.png" alt="instruction image">
+                </div>
+
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-container">
+                <button id="rightAngleCalculate" class="calculate-button">
+                    <h3>Calculate</h3>
+                </button>
+                <button id="right-angle-reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -40,7 +91,7 @@
 
     </footer>
 
-
+    <script src="../js/arcApp.js"></script>
 </body>
 
 </html>
