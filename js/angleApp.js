@@ -310,7 +310,7 @@ function triangleCalculator() {
                 break;
         }
     } else {
-        alert("Invalid Input")   // Alert for invalid inputs
+        alert("Three values are required, one must be a side")   // Alert for invalid inputs
         alertState = 1
         resetPage()
     }
