@@ -160,6 +160,23 @@ header .title-container h1 {
     background-color: rgba(176, 59, 16, 0.775);
 }
 
+.paired-container .input-title-container{
+    background-color: coral;
+    color: white;
+    width: 220px;
+    padding: 3px 0 3px 20px;
+    border-radius: 5px;
+}
+
+/* .paired-container hr{
+    margin: 10px 0 0 0;
+    width: 200px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  coral;
+    border-radius: 2px;
+} */
+
 @media screen and (max-width: 930px) {
     .calculator-container .paired-container #right-triangle {
         max-height: 200px;
@@ -169,6 +186,10 @@ header .title-container h1 {
         background-color: #121212;
         color: white;
         max-width: 100px;
+    }
+
+    .paired-container .input-title-container{
+        width: 120px;
     }
 
 }
@@ -217,6 +238,10 @@ header .title-container h1 {
     header .title-container h1 {
         text-align: center;
         text-transform: uppercase;
+    }
+
+    .paired-container .input-title-container{
+        width: 120px;
     }
 
     .button-container .reset-button {
