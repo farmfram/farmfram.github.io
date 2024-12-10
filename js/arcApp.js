@@ -34,6 +34,10 @@ function arcCalculator() {
         return radius - ((Math.cos((angle / 2) * (Math.PI / 180))) * radius)
     }
 
+    function radiusFromChord(angle, chord) {
+        return chord/(Math.sin((angle/2)*(Math.PI/180))*2)
+    }
+
 
     //check number of inputs recieved
     let inputCount = 0
@@ -70,24 +74,45 @@ function arcCalculator() {
                 break;
 
             case (radius !== 0 && height !== 0):
+                angle =  (Math.acos((radius-height)/radius))*(180/Math.PI)*2
+                chord = chordLengthEquation(angle, radius)
+                arcLength = arcLengthEquation(angle, radius)
                 break;
 
             case (angle !== 0 && arcLength !== 0):
+                radius = ((arcLength*180)/(angle*Math.PI))
+                chord = chordLengthEquation(angle, radius)
+                height = heightEquation(angle, radius)
                 break;
 
             case (angle !== 0 && chord !== 0):
+                radius = radiusFromChord(angle, chord)
+                arcLength = arcLengthEquation(angle, radius)
+                height = heightEquation(angle, radius)
                 break;
 
             case (angle !== 0 && height !== 0):
+                radius = height/(1-Math.cos((angle/2)*(Math.PI/180)))
+                chord = chordLengthEquation(angle, radius)
+                arcLength = arcLengthEquation(angle, radius)
                 break;
 
             case (arcLength !== 0 && chord !== 0):
+                alert("No Bueno")   // Alert for invalid inputs
+                alertState = 1
+                resetPage()
                 break;
 
             case (arcLength !== 0 && height !== 0):
+                alert("No Bueno")   // Alert for invalid inputs
+                alertState = 1
+                resetPage()
                 break;
 
             case (chord !== 0 && height !== 0):
+                radius = (height**2+(chord/2)**2)/(2*height)
+                angle = (Math.acos((radius-height)/radius)*(180/Math.PI))*2
+                arcLength = arcLengthEquation(angle, radius)
                 break;
 
             default:
