@@ -27,8 +27,87 @@
     </header>
 
     <section class="calculator-section">
+        <!-- cone Caluclator Container -->
+        <div class="calculator-container">
+            <div class="calculator-title">
+                <h2>Cone Calculator</h2>
+            </div>
 
+            <!-- Groups the Input sections with the Instructional Image -->
+            <div class="paired-container">
+
+                <div class="input-container">
+                    <h3 class="input-title-container">Dimensions</h3>
+                    <label class="number-bar-title" for="height">
+                        <h3>Center Height</h3>
+                    </label>
+                    <input class="number-bar" id="height" type="number">
+
+                    <label class="number-bar-title" for="top-diameter">
+                        <h3>Top Diameter</h3>
+                    </label>
+                    <input class="number-bar" id="top-diameter" type="number">
+
+                    <label class="number-bar-title" for="bottom-diameter">
+                        <h3>Bottom Diameter</h3>
+                    </label>
+                    <input class="number-bar" id="bottom-diameter" type="number">
+                </div>
+
+                <div class="map-container">
+                    <img id="right-triangle" src="../images/formedConeGraphic.png" alt="instruction image">
+                </div>
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-container">
+                <button id="coneCalculate" class="calculate-button">
+                    <h3>Calculate</h3>
+                </button>
+                <button  id="cone-reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
+            </div>
+
+        </div>
     </section>
+
+    <section class="calculator-section">
+        <!-- cone Caluclator Container -->
+        <div class="calculator-container">
+            <div class="calculator-title">
+                <h2>Cone Calculator</h2>
+            </div>
+
+            <!-- Groups the Input sections with the Instructional Image -->
+            <div class="paired-container">
+
+                <div class="input-container">
+                    <h3 class="input-title-container">Results</h3>
+                    <label class="number-bar-title" for="tri-side-a">
+                        <h3>Side A</h3>
+                    </label>
+                    <input class="number-bar" id="tri-side-a" type="number">
+
+                    <label class="number-bar-title" for="tri-side-b">
+                        <h3>Side B</h3>
+                    </label>
+                    <input class="number-bar" id="tri-side-b" type="number">
+
+                    <label class="number-bar-title" for="tri-side-c">
+                        <h3>Side C</h3>
+                    </label>
+                    <input class="number-bar" id="tri-side-c" type="number">
+                </div>
+
+                <div class="map-container">
+                    <img id="right-triangle" src="../images/formedConeGraphic.png" alt="instruction image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 
     <footer>
 
@@ -37,7 +116,7 @@
         </div>
 
     </footer>
-
+    <script src="../js/coneApp.js"></script>
 </body>
 
 </html>
