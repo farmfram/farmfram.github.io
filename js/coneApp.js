@@ -11,15 +11,8 @@ function coneCalculator() {
     let height = +document.getElementById('height').value
     let topDiameter = +document.getElementById('top-diameter').value
     let bottomDiameter = +document.getElementById('bottom-diameter').value
-    // let patternAngle = +document.getElementById('pattern-angle').value
-    // let innerRadius = +document.getElementById('inner-radius').value
-    // let outRadius = +document.getElementById('outer-radius').value
-    // let chord = +document.getElementById('chord-length').value
 
     function conePrint() {
-        document.getElementById('height').value = parseFloat(height.toFixed(4))
-        document.getElementById('top-diameter').value = parseFloat(topDiameter.toFixed(4))
-        document.getElementById('bottom-diameter').value = parseFloat(bottomDiameter.toFixed(4))
         document.getElementById('pattern-angle').value = parseFloat(patternAngle.toFixed(2))
         document.getElementById('inner-radius').value = parseFloat(innerRadius.toFixed(4))
         document.getElementById('outer-radius').value = parseFloat(outerRadius.toFixed(4))
