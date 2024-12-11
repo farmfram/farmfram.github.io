@@ -28,7 +28,7 @@
 
     <section class="calculator-section">
         <!-- cone Caluclator Container -->
-        <div class="calculator-container">
+        <div id="dimension-container" class="calculator-container">
             <div class="calculator-title">
                 <h2>Cone Calculator</h2>
             </div>
@@ -64,17 +64,15 @@
                 <button id="coneCalculate" class="calculate-button">
                     <h3>Calculate</h3>
                 </button>
-                <button  id="cone-reset" class="reset-button">
+                <!-- <button  id="cone-reset" class="reset-button">
                     <h3>Reset</h3>
-                </button>
+                </button> -->
             </div>
 
         </div>
-    </section>
 
-    <section class="calculator-section">
         <!-- cone Caluclator Container -->
-        <div class="calculator-container">
+        <div id="result-container" class="calculator-container">
             <div class="calculator-title">
                 <h2>Cone Calculator</h2>
             </div>
@@ -83,26 +81,39 @@
             <div class="paired-container">
 
                 <div class="input-container">
-                    <h3 class="input-title-container">Results</h3>
-                    <label class="number-bar-title" for="tri-side-a">
-                        <h3>Side A</h3>
+                    <h3 class="input-title-container">Half Pattern</h3>
+                    <label class="number-bar-title" for="pattern-angle">
+                        <h3>Pattern Angle</h3>
                     </label>
-                    <input class="number-bar" id="tri-side-a" type="number">
+                    <input class="number-bar" id="pattern-angle" type="number">
 
-                    <label class="number-bar-title" for="tri-side-b">
-                        <h3>Side B</h3>
+                    <label class="number-bar-title" for="inner-radius">
+                        <h3>Inner Radius</h3>
                     </label>
-                    <input class="number-bar" id="tri-side-b" type="number">
+                    <input class="number-bar" id="inner-radius" type="number">
 
-                    <label class="number-bar-title" for="tri-side-c">
-                        <h3>Side C</h3>
+                    <label class="number-bar-title" for="outer-radius">
+                        <h3>Outer Radius</h3>
                     </label>
-                    <input class="number-bar" id="tri-side-c" type="number">
+                    <input class="number-bar" id="outer-radius" type="number">
+
+                    <label class="number-bar-title" for="chord-length">
+                        <h3>Chord Length</h3>
+                    </label>
+                    <input class="number-bar" id="chord-length" type="number">
                 </div>
 
                 <div class="map-container">
-                    <img id="right-triangle" src="../images/formedConeGraphic.png" alt="instruction image">
+                    <img id="right-triangle" src="../images/flatCone.png" alt="instruction image">
                 </div>
+            </div>
+
+            
+            <!-- Button Container -->
+            <div class="button-container">
+                <button  id="cone-reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
             </div>
 
         </div>
