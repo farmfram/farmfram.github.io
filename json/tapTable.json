@@ -1,0 +1,41 @@
+{
+    "imperialTaps": [
+        {
+            "courseThread": [
+                {
+                    "tapSize": ".25",
+                    "drillSize": ".201",
+                    "pitch": "20 TPI"
+                },
+                {
+                    "tapSize": ".375",
+                    "drillSize": ".5/16"
+                }
+            ]
+        },
+        {
+            "fineThread": [
+                {
+
+                }
+            ]
+        }
+    ],
+
+    "metricTaps": [
+        {
+            "courseThread": [
+                {
+
+                }
+            ]
+        },
+        {
+            "fineThread": [
+                {
+
+                }
+            ]
+        }
+    ]
+}
