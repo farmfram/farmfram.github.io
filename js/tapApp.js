@@ -19,7 +19,7 @@ function nextSelect() {
     switch (true) {
         case (currentStandard == "imperial-course"):
             console.log("case1")
-            populateList("imperialTaps[0].courseThread")
+            populateList("imperial", "course")
             break;
 
         case (currentStandard == "imperial-fine"):
@@ -37,16 +37,31 @@ function nextSelect() {
 
 }
 
-function populateList(selected) {
+function populateList(standard, series) {
+
 
     fetch('../json/tapTable.json')
                 .then(response => response.json())
                 .then(data => {
-                    //values from JSON
-                    const imperialCourseThread = data.selected;
+
+
+                    let currentTap;
+                    if (standard === "imperial"){
+                        currentTap = data.imperialTaps;
+                    } else if (standard === 'metric') {
+                        currentTap = data.metricTaps;
+                    }
+
+                    let threadType;
+                    if (series === 'coarse') {
+                        threadType = taps[0].courseThread;
+                    } else if (series === 'fine') {
+                        threadType = taps[1].fineThread;
+                    }
+        
 
                     //first tap size and drill size in imperial course thread
-                    const firstImperialTap = imperialCourseThread[0];
+                    const firstImperialTap = threadType[0];
                     console.log("Imperial Tap Size:", firstImperialTap.tapSize); // Output: .25
                     console.log("Imperial Drill Size:", firstImperialTap.drillSize); // Output: .201
                     console.log("Imperial Pitch:", firstImperialTap.pitch); // Output: 20 TPI
