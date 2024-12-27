@@ -9,14 +9,72 @@
                 },
                 {
                     "tapSize": ".375",
-                    "drillSize": ".5/16"
+                    "drillSize": ".5/16",
+                    "pitch": "16 TPI"
+                },
+                {
+                    "tapSize": ".5",
+                    "drillSize": ".375",
+                    "pitch": "12 TPI"
+                },
+                {
+                    "tapSize": ".625",
+                    "drillSize": ".531",
+                    "pitch": "11 TPI"
+                },
+                {
+                    "tapSize": ".75",
+                    "drillSize": ".656",
+                    "pitch": "10 TPI"
+                },
+                {
+                    "tapSize": ".875",
+                    "drillSize": ".75",
+                    "pitch": "9 TPI"
+                },
+                {
+                    "tapSize": "1.0",
+                    "drillSize": ".875",
+                    "pitch": "8 TPI"
                 }
             ]
         },
         {
             "fineThread": [
                 {
-
+                    "tapSize": ".25",
+                    "drillSize": ".213",
+                    "pitch": "28 TPI"
+                },
+                {
+                    "tapSize": ".375",
+                    "drillSize": ".368",
+                    "pitch": "24 TPI"
+                },
+                {
+                    "tapSize": ".5",
+                    "drillSize": ".434",
+                    "pitch": "20 TPI"
+                },
+                {
+                    "tapSize": ".625",
+                    "drillSize": ".531",
+                    "pitch": "18 TPI"
+                },
+                {
+                    "tapSize": ".75",
+                    "drillSize": ".656",
+                    "pitch": "16 TPI"
+                },
+                {
+                    "tapSize": ".875",
+                    "drillSize": ".75",
+                    "pitch": "14 TPI"
+                },
+                {
+                    "tapSize": "1.0",
+                    "drillSize": ".875",
+                    "pitch": "12 TPI"
                 }
             ]
         }
@@ -26,14 +84,118 @@
         {
             "courseThread": [
                 {
-
+                    "tapSize": "M5",
+                    "drillSize": "4.2mm",
+                    "pitch": "0.8mm"
+                },
+                {
+                    "tapSize": "M6",
+                    "drillSize": "5mm",
+                    "pitch": "1.0mm"
+                },
+                {
+                    "tapSize": "M8",
+                    "drillSize": "6.8mm",
+                    "pitch": "1.25mm"
+                },
+                {
+                    "tapSize": "M10",
+                    "drillSize": "8.5mm",
+                    "pitch": "1.5mm"
+                },
+                {
+                    "tapSize": "M12",
+                    "drillSize": "10mm",
+                    "pitch": "1.75mm"
+                },
+                {
+                    "tapSize": "M14",
+                    "drillSize": "12mm",
+                    "pitch": "2.0mm"
+                },
+                {
+                    "tapSize": "M16",
+                    "drillSize": "14mm",
+                    "pitch": "2.0mm"
+                },
+                {
+                    "tapSize": "M18",
+                    "drillSize": "15.5mm",
+                    "pitch": "2.5mm"
+                },
+                {
+                    "tapSize": "M20",
+                    "drillSize": "17mm",
+                    "pitch": "2.5mm"
+                },
+                {
+                    "tapSize": "M22",
+                    "drillSize": "19mm",
+                    "pitch": "2.5mm"
+                },
+                {
+                    "tapSize": "M24",
+                    "drillSize": "21mm",
+                    "pitch": "3.0mm"
                 }
             ]
         },
         {
             "fineThread": [
                 {
-
+                    "tapSize": "M5",
+                    "drillSize": "4mm",
+                    "pitch": "0.5mm"
+                },
+                {
+                    "tapSize": "M6",
+                    "drillSize": "5mm",
+                    "pitch": "0.75mm"
+                },
+                {
+                    "tapSize": "M8",
+                    "drillSize": "6.5mm",
+                    "pitch": "1.0mm"
+                },
+                {
+                    "tapSize": "M10",
+                    "drillSize": "8.2mm",
+                    "pitch": "1.0mm"
+                },
+                {
+                    "tapSize": "M12",
+                    "drillSize": "10mm",
+                    "pitch": "1.25mm"
+                },
+                {
+                    "tapSize": "M14",
+                    "drillSize": "12.5mm",
+                    "pitch": "1.5mm"
+                },
+                {
+                    "tapSize": "M16",
+                    "drillSize": "14mm",
+                    "pitch": "1.5mm"
+                },
+                {
+                    "tapSize": "M18",
+                    "drillSize": "16mm",
+                    "pitch": "2.0mm"
+                },
+                {
+                    "tapSize": "M20",
+                    "drillSize": "17.5mm",
+                    "pitch": "2.0mm"
+                },
+                {
+                    "tapSize": "M22",
+                    "drillSize": "19mm",
+                    "pitch": "2.0mm"
+                },
+                {
+                    "tapSize": "M24",
+                    "drillSize": "21mm",
+                    "pitch": "2.0mm"
                 }
             ]
         }
