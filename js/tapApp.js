@@ -54,9 +54,9 @@ function populateList(standard, series) {
 
                     let threadType;
                     if (series === 'coarse') {
-                        threadType = taps[0].courseThread;
+                        threadType = currentTap[0].courseThread;
                     } else if (series === 'fine') {
-                        threadType = taps[1].fineThread;
+                        threadType = currentTap[1].fineThread;
                     }
         
 
