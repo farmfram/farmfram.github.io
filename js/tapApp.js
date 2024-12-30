@@ -14,24 +14,25 @@ function nextSelect() {
     console.log("great")
     let selectedStandard = document.getElementById("tap-type");
     let currentStandard = selectedStandard.value;
-    let course = 0
-    let fine = 1
     switch (true) {
         case (currentStandard == "imperial-course"):
             console.log("case1")
-            populateList("imperial", "course")
+            populateList("imperial", "coarse")
             break;
 
         case (currentStandard == "imperial-fine"):
             console.log("case2")
+            populateList("imperial", "fine")
             break;
 
         case (currentStandard == "metric-course"):
             console.log("case3")
+            populateList("metric", "coarse")
             break;
 
         case (currentStandard == "metric-fine"):
             console.log("case4")
+            populateList("metric", "fine")
             break;
     }
 
