@@ -3,8 +3,8 @@
         {
             "courseThread": [
                 {
-                    "tapSize": ".25",
-                    "drillSize": ".201",
+                    "tapSize": "1/4\"",
+                    "drillSize": "F or 13/64\"",
                     "pitch": "20 TPI"
                 },
                 {

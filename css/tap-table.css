@@ -1,0 +1,16 @@
+.option-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.option-form label{
+    color: white;
+}
+
+.option-form select{
+    max-width: 150px;
+}
+
+.input-container p{
+    color: white;
+}

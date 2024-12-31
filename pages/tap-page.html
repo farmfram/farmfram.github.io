@@ -33,6 +33,7 @@
             <div class="calculator-title">
                 <h2>Tap Table</h2>
             </div>
+            <br>
 
             <!-- Groups the Input sections with the Instructional Image -->
             <div class="paired-container">
@@ -56,15 +57,24 @@
                         <select disabled name="tap-diameter" id="tap-diameter">
                             <option value="" selected disabled hidden>Choose here</option>
                         </select>
-                        <br><br>
-                        <input type="submit" value="Submit">
+                        <br>
+                        <div class="button-container">
+                        </div>
                     </form>
 
+                    <div id="tap-display">
+                    </div>
                 </div>
 
                 <div class="map-container">
                     <img id="right-triangle" src="../images/formedConeGraphic.png" alt="instruction image">
                 </div>
+            </div>
+
+            <div class="button-container">
+                <button id="tap-reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
             </div>
 
         </div>

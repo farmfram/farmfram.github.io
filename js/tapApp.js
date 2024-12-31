@@ -10,7 +10,21 @@
 // this will call a function that uses fetch to recieve data from the json file
 // new function = tapDrillFinder(units, series, diameter)
 
+let selectLimit = 0;
+
+function resetPage() {
+    location.reload();
+    return false;
+}
+
 function nextSelect() {
+    if (selectLimit !== 0){
+        resetPage();
+    }
+
+    selectLimit += 1;
+    console.log("selectLimit: ", selectLimit)
+
     console.log("great")
     selectedStandard = document.getElementById("tap-type");
     currentStandard = selectedStandard.value;
@@ -39,7 +53,6 @@ function nextSelect() {
 }
 
 function populateList(standard, series) {
-
     fetch('../json/tapTable.json')
                 .then(response => response.json())
                 .then(data => {
@@ -128,10 +141,18 @@ function getTap(standard, series, dia){
                         console.log("current Diamter: ", currentDiameter.tapSize)
                         console.log("current Drill: ", currentDiameter.drillSize)
                         console.log("current pitch: ", currentDiameter.pitch)
-                        // const opt = document.createElement("option");
-                        // opt.value = i;
-                        // opt.innerHTML = currentDiameter.tapSize
-                        // document.getElementById("tap-diameter").appendChild(opt)
+
+                        const displaySize = document.createElement("p");
+                        displaySize.innerHTML = "Tap Daimeter: "+currentDiameter.tapSize
+                        document.getElementById("tap-display").appendChild(displaySize)
+
+                        const displayDrill = document.createElement("p");
+                        displayDrill.innerHTML = "Drill Diameter: "+currentDiameter.drillSize
+                        document.getElementById("tap-display").appendChild(displayDrill)
+
+                        const displayPitch = document.createElement("p");
+                        displayPitch.innerHTML = "Thread Pitch: "+currentDiameter.pitch
+                        document.getElementById("tap-display").appendChild(displayPitch)
                     
                 })
                 .catch(error => console.error('Error loading the JSON file:', error));
@@ -143,3 +164,6 @@ tapSelect.addEventListener('input', nextSelect)
 
 let diameterSelect = document.getElementById('tap-diameter')
 diameterSelect.addEventListener('input', tapDisplay)
+
+let buttonVar1 = document.getElementById('tap-reset')
+buttonVar1.addEventListener('click', resetPage)
