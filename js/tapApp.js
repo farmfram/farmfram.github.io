@@ -43,11 +43,6 @@ function nextSelect() {
             console.log("case3")
             populateList("metric", "coarse")
             break;
-
-        case (currentStandard == "metric-fine"):
-            console.log("case4")
-            populateList("metric", "fine")
-            break;
     }
 
 }
@@ -107,11 +102,6 @@ function tapDisplay(){
         case (currentStandard == "metric-course"):
             console.log("case3")
             getTap("metric", "coarse", tapDiameter)
-            break;
-
-        case (currentStandard == "metric-fine"):
-            console.log("case4")
-            getTap("metric", "fine", tapDiameter)
             break;
     }
     
