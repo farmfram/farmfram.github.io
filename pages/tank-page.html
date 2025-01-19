@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <title>References</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/tank.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="banner-container">
+            <img src="../images/gears.jpg" alt="gears">
+        </div>
+
+        <div class="home-button">
+            <a href="../index.html">
+                <h3>Home</h3>
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1>Tank Layout Calculator</h1>
+        </div>
+    </header>
+
+    <section class="calculator-section">
+        <!-- cone Caluclator Container -->
+        <div id="tank-container" class="calculator-container">
+            <div class="calculator-title">
+                <h2>Tank Calculator</h2>
+            </div>
+            <br>
+
+            <!-- Groups the Input sections with the Instructional Image -->
+            <div class="paired-container">
+
+                <div class="input-container">
+                    <label class="number-bar-title" for="part-count">
+                        <h3>How Many parts?</h3>
+                    </label>
+                    <input class="number-bar" id="part-count" type="number">
+
+                    <div id="tank-inputs">
+                    </div>
+
+                    <div id="part-input-display">
+                    </div>
+
+                    <div id="part-output-display">
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <img id="right-triangle" src="../images/ThreadDiagram.png" alt="instruction image">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button id="next-part" class="calculate-button">
+                    <h3>Next</h3>
+                </button>
+                <button id="reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="visibility: hidden;" id="tank-section" class="calculator-section">
+        <!-- cone Caluclator Container -->
+        <div id="tank-results-container" class="calculator-container">
+            <div class="calculator-title">
+                <h2>Tank Results</h2>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <table id="table-container" class="results-table">
+                <thead>
+                <tr class="table-header-row">
+                    <th class="table-header">Name</th>
+                    <th class="table-header">Angle</th>
+                    <th class="table-header">Arc Length</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+
+            <div class="button-container">
+                <button id="reset2" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="banner-container">
+            <img src="../images/gears.jpg" alt="gears">
+        </div>
+
+    </footer>
+    <script src="../js/tankApp.js"></script>
+</body>
+
+</html>
