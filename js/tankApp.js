@@ -107,7 +107,7 @@ function createPartTable() {
 
         const nextarcLength = document.createElement("td");
         nextarcLength.className = "table-data";
-        nextarcLength.innerHTML = currentLength
+        nextarcLength.innerHTML = parseFloat(currentLength.toFixed(4))
         document.getElementById(currentRow).appendChild(nextarcLength)
 
 

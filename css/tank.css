@@ -1,17 +1,17 @@
-.option-form{
+.option-form {
     display: flex;
     flex-direction: column;
 }
 
-.option-form label{
+.option-form label {
     color: white;
 }
 
-.option-form select{
+.option-form select {
     max-width: 150px;
 }
 
-.input-container p{
+.input-container p {
     color: white;
 }
 
@@ -31,12 +31,41 @@
 }
 
 #tank-section .results-table, th, td {
-    border:1px solid;
+    border: 1px solid coral;
+    border-width: 3px;
+}
+
+#tank-section .results-table{
+margin-left: 10px;
+}
+
+#tank-section th {
+    height: 50px;
+    font-size: 20px;
+}
+
+#tank-section td {
+    height: 30px;
+    font-size: 16px;
 }
 
 #tank-section .results-table {
-    border:1px solid;
+    border: 1px solid;
     border-collapse: collapse;
     color: white;
     width: 500px;
+}
+
+hr {
+    margin-left: 0;
+    margin-top: 30px;
+    border: 3px solid coral;
+    border-radius: 2px;
+    max-width: 240px;
+}
+
+@media screen and (max-width: 660px) {
+    #tank-section .results-table {
+        width: 100%;
+    }
 }
