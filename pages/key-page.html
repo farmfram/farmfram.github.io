@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <title>Key Calculator</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/arc-page.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="banner-container">
+            <img src="../images/gears.jpg" alt="gears">
+        </div>
+
+        <div class="home-button">
+            <a href="../index.html">
+                <h3>Home</h3>
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1>Key Seat Depth Calculator</h1>
+        </div>
+
+    </header>
+
+    <section class="calculator-section">
+        <!-- arc Caluclator Container -->
+        <div class="calculator-container">
+            <div class="calculator-title">
+                <h2>Key Calculator</h2>
+            </div>
+
+            <!-- Groups the Input sections with the Instructional Image -->
+            <div class="paired-container">
+
+                <div class="input-container">
+
+                    <!--Diameter-->
+                    <label class="number-bar-title" for="diameter">
+                        <h3>Shaft Diameter</h3>
+                    </label>
+                    <input class="number-bar" id="diameter" type="number">
+
+                    <!--Key Width-->
+                    <label class="number-bar-title" for="key-size">
+                        <h3>Key Width</h3>
+                    </label>
+                    <input class="number-bar" id="key-size" type="number">
+
+                    <!--Calculated Depth-->
+                    <label class="number-bar-title" for="key-depth">
+                        <h3>Milled Key Depth</h3>
+                    </label>
+                    <input class="number-bar" id="key-depth" type="number">
+                </div>
+
+                <div class="map-container">
+                    <img id="right-triangle" src="../images/arc-graphic.png" alt="instruction image">
+                </div>
+
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-container">
+                <button id="key-calculate" class="calculate-button">
+                    <h3>Calculate</h3>
+                </button>
+                <button id="key-reset" class="reset-button">
+                    <h3>Reset</h3>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="banner-container">
+            <img src="../images/gears.jpg" alt="gears">
+        </div>
+
+    </footer>
+
+    <script src="../js/keyApp.js"></script>
+</body>
+
+</html>
